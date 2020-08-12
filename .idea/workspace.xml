@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="68079542-b1cf-46a4-9252-3ee6683d3432" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="20080411" />
+  <component name="ProjectId" id="1fw5vI0886s1lfyWASHORUIlxDV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/flutter_full_pdf_viewer-master/flutter_full_pdf_viewer-master" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="jie.pdf_reader" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\MyCodes\flutter\pdf_reader\lib" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="68079542-b1cf-46a4-9252-3ee6683d3432" name="Default Changelist" comment="" />
+      <created>1597116543946</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597116543946</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1597196331229">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1597196331229" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1597195869753">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597195869753" />
+    <state width="1108" height="373" key="GridCell.Tab.0.bottom" timestamp="1597198154682">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1108" height="373" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597198154682" />
+    <state width="1108" height="373" key="GridCell.Tab.0.center" timestamp="1597198154682">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1108" height="373" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597198154682" />
+    <state width="1108" height="373" key="GridCell.Tab.0.left" timestamp="1597198154681">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1108" height="373" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597198154681" />
+    <state width="1108" height="373" key="GridCell.Tab.0.right" timestamp="1597198154682">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1108" height="373" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597198154682" />
+  </component>
+</project>
