@@ -8,6 +8,8 @@ class PDFScaffold extends StatefulWidget {
   final PreferredSizeWidget appBar;
   final double marginLeft;
   final double marginTop;
+  final double marginButton;
+  final double marginRight;
   final String path;
   final bool primary;
 
@@ -16,6 +18,8 @@ class PDFScaffold extends StatefulWidget {
     this.appBar,
     this.marginLeft,
     this.marginTop,
+    this.marginRight,
+    this.marginButton,
     @required this.path,
     this.primary = true,
   }) : super(key: key);
@@ -50,12 +54,11 @@ class _PDFScaffoldState extends State<PDFScaffold> {
     super.didChangeDependencies();
     if (_rect == null) {
       _rect = _buildRect(context);
-      print("_rect${_rect}");
+
       LoadPDF = await pdfViwerRef.launch(
         widget.path,
         rect: _rect,
       );
-      print("LoadPDF-${LoadPDF}");
     } else {
       final rect = _buildRect(context);
       if (_rect != rect) {
@@ -71,7 +74,7 @@ class _PDFScaffoldState extends State<PDFScaffold> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        body: Center(child: !LoadPDF ? Text("未获取工位信息或未找到pdf文件", style: TextStyle(fontSize: 20)) : Text("")));
+        body: Center(child: !LoadPDF ? Text("未获取信息或未找到pdf文件", style: TextStyle(fontSize: 20)) : Text("")));
   }
 
   Rect _buildRect(BuildContext context) {
@@ -84,7 +87,10 @@ class _PDFScaffoldState extends State<PDFScaffold> {
       height = 0.0;
     }
 
-    return new Rect.fromLTWH(widget.marginLeft, top + widget.marginTop, mediaQuery.size.width - widget.marginLeft,
-        height - widget.marginTop);
+    return new Rect.fromLTWH(
+        widget.marginLeft,
+        top + widget.marginTop,
+        mediaQuery.size.width - widget.marginLeft - widget.marginRight,
+        height - widget.marginTop - widget.marginButton);
   }
 }

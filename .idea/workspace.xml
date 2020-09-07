@@ -10,8 +10,12 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="20080411" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="890cab5836e700000000" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1fw5vI0886s1lfyWASHORUIlxDV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -20,7 +24,7 @@
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/flutter_full_pdf_viewer-master/flutter_full_pdf_viewer-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -45,29 +49,29 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1597196331229">
+    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser" timestamp="1599459335980">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1597196331229" />
+    <state x="765" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1599459335980" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1597195869753">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597195869753" />
-    <state width="1108" height="373" key="GridCell.Tab.0.bottom" timestamp="1597198154682">
+    <state width="1877" height="153" key="GridCell.Tab.0.bottom" timestamp="1599459962990">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1108" height="373" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597198154682" />
-    <state width="1108" height="373" key="GridCell.Tab.0.center" timestamp="1597198154682">
+    <state width="1877" height="153" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599459962990" />
+    <state width="1877" height="153" key="GridCell.Tab.0.center" timestamp="1599459962990">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1108" height="373" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597198154682" />
-    <state width="1108" height="373" key="GridCell.Tab.0.left" timestamp="1597198154681">
+    <state width="1877" height="153" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599459962990" />
+    <state width="1877" height="153" key="GridCell.Tab.0.left" timestamp="1599459962990">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1108" height="373" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597198154681" />
-    <state width="1108" height="373" key="GridCell.Tab.0.right" timestamp="1597198154682">
+    <state width="1877" height="153" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599459962990" />
+    <state width="1877" height="153" key="GridCell.Tab.0.right" timestamp="1599459962990">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1108" height="373" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597198154682" />
+    <state width="1877" height="153" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599459962990" />
   </component>
 </project>

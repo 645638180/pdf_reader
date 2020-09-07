@@ -23,9 +23,7 @@ class PdfManager {
 
     PdfManager(final Activity activity) {
         mActivity = activity;
-
         pdfView = new PDFView(mActivity, null);
-
     }
 
     void openPDF(String path) {

@@ -15,6 +15,8 @@ import java.util.Map;
 import androidx.annotation.NonNull;
 import io.flutter.app.FlutterActivity;
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
+import io.flutter.embedding.engine.plugins.activity.ActivityAware;
+import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
@@ -25,27 +27,25 @@ import io.flutter.plugin.common.PluginRegistry.Registrar;
 /**
  * PdfReaderPlugin
  */
-public class PdfReaderPlugin implements FlutterPlugin, MethodCallHandler, PluginRegistry.ActivityResultListener {
+public class PdfReaderPlugin implements FlutterPlugin, MethodCallHandler, PluginRegistry.ActivityResultListener, ActivityAware {
+    private static final String TAG = "PdfReaderPlugin.java";
     static MethodChannel channel;
     Activity activity;
     private PdfManager pdfManager;
-
-    PdfReaderPlugin(Activity activity){
-        this.activity = activity;
-    }
+    private static PluginRegistry.Registrar registrar;
 
 
     @Override
     public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
-        Log.e( "onAttachedToEngine: ", String.valueOf(activity==null));
         channel = new MethodChannel(flutterPluginBinding.getFlutterEngine().getDartExecutor(), "pdf_reader");
         channel.setMethodCallHandler(this);
     }
 
     public void registerWith(Registrar registrar) {
-        Log.e( "registerWith: ", String.valueOf(activity==null));
+        PdfReaderPlugin.registrar = registrar;
+        activity = registrar.activity();
         channel = new MethodChannel(registrar.messenger(), "pdf_reader");
-        channel.setMethodCallHandler(new PdfReaderPlugin(registrar.activity()));
+        channel.setMethodCallHandler(new PdfReaderPlugin());
     }
 
 
@@ -53,7 +53,6 @@ public class PdfReaderPlugin implements FlutterPlugin, MethodCallHandler, Plugin
     public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
         switch (call.method) {
             case "launch":
-
                 openPDF(call, result);
                 break;
             case "resize":
@@ -74,7 +73,7 @@ public class PdfReaderPlugin implements FlutterPlugin, MethodCallHandler, Plugin
         if (pdfManager != null) {
             pdfManager.close();
         }
-//        try {
+        try {
         File file = new File(path);
         if (file.exists()) {
             if (pdfManager == null || pdfManager.closed) {
@@ -84,15 +83,13 @@ public class PdfReaderPlugin implements FlutterPlugin, MethodCallHandler, Plugin
             FrameLayout.LayoutParams params = buildLayoutParams(call);
             activity.addContentView(pdfManager.pdfView, params);
             pdfManager.openPDF(path);
-            result.success(null);
+            result.success(true);
         } else {
-            Log.e("openPDF: ", "找不到文件1");
-            result.success("error");
+            result.error("文件不存在","","");
         }
-//        } catch (Exception e) {
-//            Log.e("openPDF: ", e.toString());
-//            result.error(e.toString(),"","");
-//        }
+        } catch (Exception e) {
+            result.error(e.toString(),"","");
+        }
     }
 
     private void resize(MethodCall call, final MethodChannel.Result result) {
@@ -142,5 +139,25 @@ public class PdfReaderPlugin implements FlutterPlugin, MethodCallHandler, Plugin
     @Override
     public boolean onActivityResult(int i, int i1, Intent intent) {
         return pdfManager != null;
+    }
+
+    @Override
+    public void onAttachedToActivity(ActivityPluginBinding activityPluginBinding) {
+        activity = activityPluginBinding.getActivity();
+    }
+
+    @Override
+    public void onDetachedFromActivityForConfigChanges() {
+
+    }
+
+    @Override
+    public void onReattachedToActivityForConfigChanges(ActivityPluginBinding activityPluginBinding) {
+
+    }
+
+    @Override
+    public void onDetachedFromActivity() {
+
     }
 }

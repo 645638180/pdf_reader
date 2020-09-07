@@ -25,9 +25,7 @@ class _MyAppState extends State<MyApp> {
   Future<void> initPlatformState() async {
     String platformVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
-    try {
-
-    } on PlatformException {
+    try {} on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }
 
@@ -45,15 +43,16 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Plugin example app'),
-        ),
-        body:PDFScaffold(
-          marginLeft: 0,
-          marginTop: 0,
-          path: "/storage/emulated/0/pdfs/test.pdf",
-        )
-      ),
+          appBar: AppBar(
+            title: const Text('Plugin example app'),
+          ),
+          body: PDFScaffold(
+            marginLeft: 0,
+            marginTop: 0,
+            marginButton: 0,
+            marginRight: 0,
+            path: "/storage/emulated/0/pdfs/test.pdf",
+          )),
     );
   }
 }
