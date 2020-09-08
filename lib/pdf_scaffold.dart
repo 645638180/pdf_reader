@@ -20,7 +20,7 @@ class PDFScaffold extends StatefulWidget {
     this.marginTop,
     this.marginRight,
     this.marginButton,
-    @required this.path,
+    this.path,
     this.primary = true,
   }) : super(key: key);
 
@@ -78,6 +78,11 @@ class _PDFScaffoldState extends State<PDFScaffold> {
   }
 
   Rect _buildRect(BuildContext context) {
+    var marginTop = widget.marginTop == null ? 0 : widget.marginTop;
+    var marginLeft = widget.marginLeft == null ? 0 : widget.marginLeft;
+    var marginButton = widget.marginLeft == null ? 0 : widget.marginButton;
+    var marginRight = widget.marginRight == null ? 0 : widget.marginRight;
+
     final fullscreen = widget.appBar == null;
     final mediaQuery = MediaQuery.of(context);
     final topPadding = widget.primary ? mediaQuery.padding.top : 0.0;
@@ -87,10 +92,7 @@ class _PDFScaffoldState extends State<PDFScaffold> {
       height = 0.0;
     }
 
-    return new Rect.fromLTWH(
-        widget.marginLeft,
-        top + widget.marginTop,
-        mediaQuery.size.width - widget.marginLeft - widget.marginRight,
-        height - widget.marginTop - widget.marginButton);
+    return new Rect.fromLTWH(marginLeft, top + marginTop, mediaQuery.size.width - marginLeft - marginRight,
+        height - marginTop - marginButton);
   }
 }
