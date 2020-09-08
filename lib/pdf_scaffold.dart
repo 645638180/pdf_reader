@@ -82,7 +82,7 @@ class _PDFScaffoldState extends State<PDFScaffold> {
     print("widget.marginTop == null${widget.marginTop == null}");
     double marginTop = widget.marginTop == null ? 0 : widget.marginTop;
     double marginLeft = widget.marginLeft == null ? 0 : widget.marginLeft;
-    double marginButton = widget.marginLeft == null ? 0 : widget.marginButton;
+    double marginButton = widget.marginButton == null ? 0 : widget.marginButton;
     double marginRight = widget.marginRight == null ? 0 : widget.marginRight;
 
     final fullscreen = widget.appBar == null;
