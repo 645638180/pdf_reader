@@ -14,6 +14,7 @@ class PDFScaffold extends StatefulWidget {
   final bool primary;
 
   const PDFScaffold({
+
     Key key,
     this.appBar,
     this.marginLeft,
@@ -78,10 +79,11 @@ class _PDFScaffoldState extends State<PDFScaffold> {
   }
 
   Rect _buildRect(BuildContext context) {
-    var marginTop = widget.marginTop == null ? 0 : widget.marginTop;
-    var marginLeft = widget.marginLeft == null ? 0 : widget.marginLeft;
-    var marginButton = widget.marginLeft == null ? 0 : widget.marginButton;
-    var marginRight = widget.marginRight == null ? 0 : widget.marginRight;
+    print("widget.marginTop == null${widget.marginTop == null}");
+    double marginTop = widget.marginTop == null ? 0 : widget.marginTop;
+    double marginLeft = widget.marginLeft == null ? 0 : widget.marginLeft;
+    double marginButton = widget.marginLeft == null ? 0 : widget.marginButton;
+    double marginRight = widget.marginRight == null ? 0 : widget.marginRight;
 
     final fullscreen = widget.appBar == null;
     final mediaQuery = MediaQuery.of(context);

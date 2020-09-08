@@ -48,7 +48,7 @@ class _MyAppState extends State<MyApp> {
           ),
           body: PDFScaffold(
             marginLeft: 0,
-            marginTop: 0,
+//            marginTop: 0,
             marginButton: 0,
             marginRight: 0,
             path: "/storage/emulated/0/pdfs/test.pdf",
