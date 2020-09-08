@@ -12,3 +12,12 @@ Android and/or iOS.
 For help getting started with Flutter, view our 
 [online documentation](https://flutter.dev/docs), which offers tutorials, 
 samples, guidance on mobile development, and a full API reference.
+
+
+ PDFScaffold(
+                marginLeft: 0,
+                marginButton: 0,
+                marginRight: 0,
+                marginTop: 0,
+                path: "/storage/emulated/0/pdfs/test.pdf",
+              )
