@@ -2,13 +2,16 @@
 
 pdf读取插件
 
-## Getting Started
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+pubspec.yaml>
+pdf_reader:
+      git: https://github.com/645638180/pdf_reader.git
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+
+ use:PDFScaffold(
+                marginLeft: 0,
+                marginButton: 0,
+                marginRight: 0,
+                marginTop: 0,
+                path: "/storage/emulated/0/pdfs/test.pdf",
+              )
